@@ -1,22 +1,34 @@
-# Automated Environment Setup
+# System Setup Scripts
 
-This bash script is designed to automate the process of setting up various tools and packages on your system. It performs the following tasks:
+This repository contains a collection of scripts to streamline the setup and configuration of a system. Below are brief descriptions of each script along with instructions on how to use them.
 
-1. Updates and upgrades the system packages using `apt`.
-2. Installs essential packages through `apt`, including `bash-completion`, `curl`, `vim`, `htop`, `iperf`, `maven`, and more.
-3. Installs additional packages using `snap`, such as `helm3`, `popeye`, and `kubectl`.
-4. Sets up Docker by adding the Docker repository and installing `docker-ce`, `docker-ce-cli`, `containerd.io`, `docker-buildx-plugin`, and `docker-compose-plugin`.
-5. Updates the `~/.bashrc` file with custom aliases, kubectl completion, and a custom prompt configuration.
-6. Installs Minikube and sets up the kubeconfig file for Kubernetes context switching.
-7. Adds a script to automate Kubernetes context switching in `~/.local/bin/kcc.sh`.
-8. Sets up various Helm repositories, enabling easy access to various charts.
-9. Installs Go 1.20.6 and adds it to the system PATH.
+## Scripts
+
+1. **apt_tools.sh**: Installs essential tools and utilities using the APT package manager on Debian-based systems.
+
+2. **helm_repo_add.sh**: Adds Helm repositories to your system for managing Kubernetes applications.
+
+3. **install_brew.sh**: Installs the Homebrew package manager on macOS or Linux.
+
+4. **install_docker.sh**: Installs Docker, a platform for developing, shipping, and running applications in containers.
+
+5. **install_golang.sh**: Installs the Go programming language on your system.
+
+6. **setup_minikube.sh**: Sets up Minikube, a tool for running Kubernetes clusters locally.
+
+7. **snap_tools.sh**: Installs various tools and utilities using the Snap package manager.
+
+8. **system_setup.sh**: The main setup script that orchestrates the execution of other scripts. Follow the usage instructions below.
+
+9. **update_bashrc.sh**: Updates the Bash configuration file for custom settings.
+
+10. **update_kubecontext.sh**: Updates the Kubernetes context configuration.
 
 ## Usage
 
 1. Clone the repository or copy the contents of the script into a file named `system_setup.sh`.
 2. Make the script executable: `chmod +x system_setup.sh`.
-3. Comment any funtion at the end of the script that you do not want to excute. 
+3. Comment out any function at the end of the script that you do not want to execute.
 4. Run the script with `./system_setup.sh`.
 
 Please note that this script may require root privileges for some tasks, so you may be prompted to enter your password when running it. It's essential to review the script and make any necessary adjustments before executing it on your system.
@@ -31,4 +43,5 @@ Remember to review the script thoroughly and understand its operations before ru
 
 ## Future
 
-I will enhance the script and add more features and an Ansible adaptation playbooks. If you have any suggestions/recommendations or bugs to report please do let me know.
+I will enhance the script and add more features, as well as create Ansible adaptation playbooks. If you have any suggestions, recommendations, or bugs to report, please let me know.
+
