@@ -50,7 +50,7 @@ install_apt_tools() {
     apt_install_tool() {
         local tool="$1"
         echo "Installing $tool..."
-        if sudo apt-get install -y "$tool" | sudo tee -a apt-installation.log; then
+        if sudo apt-get install -y "$tool" | tee -a apt-installation.log; then
             echo "Successfully installed: $tool"
         else
             echo "Error installing: $tool. Check apt-installation.log for details."
