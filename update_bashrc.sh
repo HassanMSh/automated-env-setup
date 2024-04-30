@@ -75,6 +75,16 @@ export CI_API_V4_URL=https://gitlab.com/api/v4
 ## Krew path
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH
 
+# Function to stop a kind cluster
+function kind_stop() {
+    docker stop $(docker ps --filter "name=$1" --format "{{.Names}}")
+}
+
+# Function to start a kind cluster
+function kind_start() {
+    docker start $(docker ps -a --filter "name=$1" --format "{{.Names}}")
+}
+
 EOF
 )
     echo "$bashrc_content" >> ~/.bashrc
