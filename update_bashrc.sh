@@ -71,6 +71,10 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 ## GitLab Read API
 
 export CI_API_V4_URL=https://gitlab.com/api/v4
+
+## Krew path
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH
+
 EOF
 )
     echo "$bashrc_content" >> ~/.bashrc
