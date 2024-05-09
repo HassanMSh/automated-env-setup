@@ -16,6 +16,12 @@ snap_packages=(
     "sublime-text --classic"
     "telegram-desktop"
     "yq"
+    "tree"
+    "vnstat"
+    "yq"
+    "telegram-desktop"
+    "sublime-text"
+    "gnome-42-2204"
 )
 
 install_snap_packages() {
