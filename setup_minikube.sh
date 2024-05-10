@@ -10,10 +10,10 @@ minikube_install() {
 
     if curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 | tee -a minikube-download.log; then
         echo "Succesfully downloaded minikube"
-        rm minikube-download.log minikube-linux-amd64
+        rm minikube-download.log
     else
         echo "Error downloading minikube. Check minikube-download.log for details."
-        rm minikube-linux-amd64 
+        rm minikube-linux-amd64
         exit 1
     fi
 

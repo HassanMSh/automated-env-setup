@@ -73,7 +73,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export CI_API_V4_URL=https://gitlab.com/api/v4
 
 ## Krew path
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # Function to stop a kind cluster
 function kind_stop() {
@@ -90,3 +90,5 @@ EOF
     echo "$bashrc_content" >> ~/.bashrc
     echo ".bashrc was updated"
 }
+
+update_bashrc
