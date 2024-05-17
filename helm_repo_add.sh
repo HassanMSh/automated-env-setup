@@ -43,17 +43,17 @@ helm_repo_add() {
         repo_url="${helm_repo_urls[$i]}"
         
         # Adding Helm repository using 'helm repo add'
-        helm3 repo add "$repo_name" "$repo_url"
+        helm repo add "$repo_name" "$repo_url"
         
         # list the repositories to verify if it was added correctly
-        helm3 repo list | grep "$repo_name"
+        helm repo list | grep "$repo_name"
     
     done
     
-    helm3 repo update
+    helm repo update
     echo "Helm repos were succesfully added"
 
-    helm3 plugin install https://github.com/helm/helm-mapkubeapis
+    helm plugin install https://github.com/helm/helm-mapkubeapis
     echo "Helm plugin mapkubeapis was succesfully installed"
 }
 
